@@ -33,17 +33,17 @@ public class FranjaHorariaController {
     }
 
     @PostMapping
-    public FranjaHorariaDTO crearCliente(@RequestBody FranjaHorariaDTO franjaHoraria) {
+    public FranjaHorariaDTO crearFranjaHoraria(@RequestBody FranjaHorariaDTO franjaHoraria) {
         return franjaHorariaService.save(franjaHoraria);
     }
 
     @PutMapping("/{id}")
-    public FranjaHorariaDTO actualizarCliente(@RequestBody FranjaHorariaDTO franjaHoraria, @PathVariable Long id) {
+    public FranjaHorariaDTO actualizarFranjaHoraria(@RequestBody FranjaHorariaDTO franjaHoraria, @PathVariable Long id) {
         return franjaHorariaService.update(id, franjaHoraria);
     }
 
     @DeleteMapping
-    public Boolean eliminarCliente(@RequestParam Long id) {
+    public Boolean eliminarFranjaHoraria(@RequestParam Long id) {
         return franjaHorariaService.delete(id);
     }
 }
